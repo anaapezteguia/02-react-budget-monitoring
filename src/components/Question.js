@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Error from './Error';
 
 const Question = () => {
   // define state
@@ -14,18 +15,20 @@ const Question = () => {
   const addBudget = (ev) => {
     ev.preventDefault();
 
-    //   validation
+    // validation
     if (amount < 1 || isNaN(amount)) {
       setError(true);
       return;
     }
-    //   if validation is ok
+    // if validation is ok
     setError(false);
   };
 
   return (
     <>
       <h2>What's your budget estimation?</h2>
+
+      {error ? <Error message="Your budget is incorrect" /> : null}
 
       <form onSubmit={addBudget}>
         <input
