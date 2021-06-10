@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Error from './Error';
 
 const Question = ({ setBudget, setRemaining, setShowQuestion }) => {
-  // define state
+  // define states
   const [amount, setAmount] = useState(0);
   const [error, setError] = useState(false);
 
