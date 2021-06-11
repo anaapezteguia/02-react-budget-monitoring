@@ -26,7 +26,7 @@ function App() {
       // reset to false
       setAddExpense(false);
     }
-  }, [addExpense]);
+  }, [addExpense, charge, expenses, remaining]); //dependencies
 
   // when adding new expense
   // const addNewExpense = (expense) => {
