@@ -1,6 +1,7 @@
 import React from 'react';
 //we put keys here because it is not a default import
 import { reviewBudget } from '../helpers';
+import PropTypes from 'prop-types';
 
 const BudgetControl = ({ budget, remaining }) => {
   return (
@@ -13,4 +14,8 @@ const BudgetControl = ({ budget, remaining }) => {
   );
 };
 
+BudgetControl.propTypes = {
+  budget: PropTypes.number.isRequired,
+  remaining: PropTypes.number.isRequired,
+};
 export default BudgetControl;
