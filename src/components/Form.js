@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Error from './Error';
+const shortid = require('shortid');
 
 const Form = () => {
   const [expenseName, setExpenseName] = useState('');
@@ -23,7 +24,12 @@ const Form = () => {
     setError(false);
 
     // building the expense
-
+    const expense = {
+      expenseName,
+      expenseAmount,
+      id: shortid.generate(), // installing library with 'npm i shortid'
+    };
+    console.log(expense);
     // pass the expense to main component
 
     // reset form
