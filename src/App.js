@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Question from './components/Question';
 import Form from './components/Form';
+import ExpensesList from './components/ExpensesList';
 
 function App() {
   // define money states
@@ -33,7 +34,9 @@ function App() {
               <div className="one-half column">
                 <Form addNewExpense={addNewExpense} />
               </div>
-              <div className="one-half column">2</div>
+              <div className="one-half column">
+                <ExpensesList expenses={expenses} />
+              </div>
             </div>
           )}
         </div>
